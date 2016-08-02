@@ -1,0 +1,195 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300italic,300,100italic,100,400italic,700,700italic);
+body, html {
+    background: url(../img/geometry2.png);
+    font-family: 'Roboto', sans-serif;
+}
+.menu-header {
+    background: #383939;
+    border: transparent;
+    border-bottom: 5px solid #ff5a26;
+    border-radius:0;
+}
+.navbar-default .navbar-nav > li > a {
+    color:#fff;
+    transition: box-shadow .1s linear;
+}
+.navbar-default .navbar-nav > li > a:hover {
+    color:#fff;
+    text-shadow:0 1px 5px rgba(0,0,0,0.5);
+    box-shadow: inset 0 5px 0 #ff5a26;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color:#fff;
+    background: #ff5a26;
+}
+.userinfo {
+    background:#ff5a26;
+    border:transparent;
+    box-shadow:0;
+    -webkit-box-shadow: 0;
+}
+.userinfo .divider {
+    background: #e45022;
+}
+.userinfo > li > a {
+    color: #fff;
+}
+.header-up {
+
+    background: #e24f22;
+    background: -moz-linear-gradient(45deg, #e24f22 0%, #ba4eba 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, #e24f22), color-stop(100%, #ba4eba));
+    background: -webkit-linear-gradient(45deg, #e24f22 0%, #ba4eba 100%);
+    background: -o-linear-gradient(45deg, #e24f22 0%, #ba4eba 100%);
+    background: -ms-linear-gradient(45deg, #e24f22 0%, #ba4eba 100%);
+    background: linear-gradient(45deg, #e24f22 0%, #ba4eba 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e24f22', endColorstr='#ba4eba', GradientType=1 );
+
+}
+.panels {
+    padding-top:15px;
+}
+.panel-header {
+    background:rgba(0,0,0,0.3);
+    color:#eee;
+}
+.logo {
+    font-weight:100;
+    padding:30px 0;
+    font-size:44px;
+    color:#eee;
+}
+.btn-primary {
+    background: #ff5a26;
+    border: 1px solid #f05526;
+}
+.btn-primary:hover {
+    background: #e24d1f;
+    border: 1px solid #dc4e20;
+}
+.btn-primary:active:focus, .btn-primary:hover:active, .btn-primary:active {
+    background: #c44721;
+    border: 1px solid #bf441f;
+}
+.error-message {
+    margin:5px 0;
+    padding:5px;
+    background:#f2dede;
+    color:#a94442;
+    border-radius:4px;
+}
+.navbar-brand {
+    color:#eee;
+}
+.url-type {
+    margin:0 5px;
+    color:#666;
+    font-weight:400;
+}
+
+input[type="radio"] {
+    display:none;
+    cursor:pointer;
+
+}
+.youtube:before {
+    content: "\f16a";
+    font-family:FontAwesome;
+}
+.spotify:before {
+    content: "\f1bc";
+    font-family:FontAwesome;
+}
+.vimeo:before {
+    content: "\f27d";
+    font-family:FontAwesome;
+
+}
+.soundcloud:before {
+    content: "\f1be";
+    font-family:FontAwesome;
+}
+.url-type-text:checked + .youtube {
+    color:#cc181e;
+}
+.url-type-text:checked + .spotify {
+    color:#2ebd59;
+}
+.url-type-text:checked + .vimeo {
+    color:#A6E2F9;
+}
+.url-type-text:checked + .soundcloud {
+    color:#f50;
+}
+@media screen and (max-width:955px) {
+    .logo {
+        padding:0 0;
+        text-align:center;
+    }
+}
+.role {
+    text-align:center;
+    font-size:18px;
+}
+.Gebruiker {
+    font-weight:bold;
+    color:#333;
+}
+.status {
+    border-left: 1px solid #eee;
+    padding:0 5px;
+}
+.spotify_body {
+    background:#333;
+    color:#fff;
+    padding:7px;
+    height:115px;
+}
+.album-image {
+    padding:5px;
+}
+.playbutton {
+    color:#fff;
+    display:block;
+}
+.playbutton:hover {
+    color:#2ebd59;
+}
+.wowbutton {
+    color:#777;
+    text-transform:uppercase;
+    padding:4px 15px;
+}
+.wowbutton:before {
+    content: "\f12a";
+    font-family:FontAwesome;
+}
+.amount-wows {
+    background: rgba(255,90,38, 0.4);
+    color:#fff;
+    padding: 0 4px;
+    border-radius:2px;
+    font-size:11px;
+}
+.wowbutton:hover {
+    background: rgba(255,90,38, 0.2);
+}
+.forum-row {
+    border-bottom: 1px solid #eee;
+}
+.forum-row {
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+
+.forum-icon, .forum-icon-read, .forum-icon-unread {
+    color: #ff5a26;
+    font-size: 30px;
+    margin: 0px auto;
+    display: inline-block;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: bottom
+}
