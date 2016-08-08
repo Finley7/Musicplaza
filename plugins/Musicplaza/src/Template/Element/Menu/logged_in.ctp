@@ -14,6 +14,7 @@
             <ul class="nav navbar-nav">
                 <li><?= $this->Html->link('<i class="fa fa-home"></i> ' . __('Home'), ['controller' => 'Pages', 'action' => 'landing', 'prefix' => false], ['escape' => false]); ?></li>
                 <li><?= $this->Html->link(__('Forum'), ['controller' => 'Forums', 'action' => 'index', 'prefix' => false]); ?></li>
+                <li><?= $this->Html->link('<i class="fa fa-search"></i>', ['controller' => 'Search', 'action' => 'index', 'prefix' => 'musicplaza'], ['escape' => false]); ?></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -36,7 +37,7 @@
                         <li><?= $this->Html->link(__('Notificatie center'), ['controller' => 'Notifications', 'action' => 'index']); ?></li>
                     </ul>
                 </li>
-                <li><?= $this->Html->link('<i class="fa fa-comments"></i>', ['controller' => 'PrivateMessages', 'action' => 'index', 'prefix' => false], ['escape' => false]); ?></li>
+                <li><?= $this->Html->link('<i class="fa fa-comments"></i>', ['controller' => 'Pages', 'action' => 'chat', 'prefix' => false], ['escape' => false]); ?></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false"><?= $user->username; ?> <span class="caret"></span></a>

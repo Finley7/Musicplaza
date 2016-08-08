@@ -54,6 +54,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/register.html', ['controller' => 'Users', 'action' => 'add']);
     $routes->connect('/user-:username.html', ['controller' => 'Users', 'action' => 'view'], ['pass' => ['username']]);
     $routes->connect('/notification-center.html', ['controller' => 'Notifications', 'action' => 'index']);
+    $routes->connect('/chat.html', ['controller' => 'Pages', 'action' => 'chat']);
 
     /**
      * Connect catchall routes for all controllers.
@@ -101,8 +102,12 @@ Router::scope('/forum', function(RouteBuilder $routes){
     ]);
 });
 
-Router::prefix('ajax', ['prefix' => 'ajax'], function($routes){
+Router::prefix('ajax', function(RouteBuilder $routes) {
+    $routes->fallbacks('DashedRoute');
+});
 
+Router::prefix('musicplaza', ['prefix' => 'musicplaza'], function($routes){
+    $routes->connect('/search.html', ['controller' => 'Search', 'action' => 'index']);
 });
 
 Router::prefix('admin', ['prefix' => 'admin'], function($routes){

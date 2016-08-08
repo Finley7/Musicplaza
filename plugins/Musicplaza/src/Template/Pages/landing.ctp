@@ -57,16 +57,6 @@
                                 YouTube
                             </label>
 
-                            <input type="radio" name="type" value="vimeo" class="url-type-text" id="url-type-vimeo">
-                            <label class="url-type vimeo" for="url-type-vimeo">
-                                Vimeo
-                            </label>
-
-                            <input type="radio" name="type" value="soundcloud" class="url-type-text"
-                                   id="url-type-soundcloud">
-                            <label class="url-type soundcloud" for="url-type-soundcloud">
-                                SoundCloud
-                            </label>
                         </fieldset>
                         <?= $this->Form->submit(__('Plaatsen'), ['class' => 'btn btn-primary pull-right']); ?>
                         <?= $this->Form->end(); ?>
@@ -128,7 +118,7 @@
                                         <?= $time->created->timeAgoInWords(); ?> geplaatst
                                     </div>
                                     <div>
-                                        <?= $this->Form->postButton(' Wow! <span class="amount-wows">' . count($time->wows) . '</span>', ['controller' => 'TimelineWows', 'action' => 'add', $time->id], ['class' => 'wowbutton btn btn-xs btn-secondary', 'escape' => false]); ?>
+                                        <?= $this->Form->postButton(' <b>WOW!</b> <span class="amount-wows">' . count($time->wows) . '</span>', ['controller' => 'TimelineWows', 'action' => 'add', $time->id], ['class' => 'btn-xs btn btn-default', 'escape' => false]); ?>
                                     </div>
                                 </li>
                             <?php endforeach; ?>
@@ -158,8 +148,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="pull-left album-image">
-                                                    <img class="album-img" style="width:90px;height:90px;"
-                                                         src="img/not-found.png" alt="">
+
                                                 </div>
                                                 <div class="pull-right play"></div>
                                                 <div class="artists"></div>
@@ -167,7 +156,7 @@
                                         </div>
                                     <?php elseif ($time->type == 'youtube'): ?>
                                         <div class="status">
-                                            <iframe id="ytplayer" type="text/html" width="125" height="125"
+                                            <iframe id="ytplayer" type="text/html" width="175" height="125"
                                                     src="https://www.youtube.com/embed/<?= $time->url; ?>?&origin=http://example.com"
                                                     frameborder="0">
 

@@ -91,7 +91,7 @@ class TimelineWowsTable extends Table
         $notification = $notificationRegistry->newEntity();
 
         $notification->user_id = $timeline->user_id;
-        $notification->message = __("{0} heeft je bericht een WOW! gegeven", $timeline->user->username);
+        $notification->message = __("Je bericht is geWOW'd!");
         $notification->url = '/timeline/view/' . $timeline->id;
 
         $notificationRegistry->save($notification);

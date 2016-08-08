@@ -72,7 +72,9 @@ class PagesController extends AppController
                     ]
                 ]
             ]
-        );
+        )->where([
+            'status' => 'accepted'
+        ]);
 
         $i = 0;
         $timeline = [];
@@ -110,5 +112,17 @@ class PagesController extends AppController
         $this->set('recent_threads', $threads);
         $this->set('page_parent', 'home');
 
+    }
+
+    public function chat() {
+        $this->loadModel('Users');
+        $this->loadModel('Chats');
+
+        $users = $this->Users->find('all')->select('id')->count();
+        $chats = $this->Chats->find('all')->select('id')->count();
+
+        $this->set(compact('users', 'chats'));
+
+        $this->set('title', __('Chatbox'));
     }
 }

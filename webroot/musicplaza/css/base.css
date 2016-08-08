@@ -22,15 +22,6 @@ body, html {
     color:#fff;
     background: #ff5a26;
 }
-.userinfo {
-    background:#ff5a26;
-    border:transparent;
-    box-shadow:0;
-    -webkit-box-shadow: 0;
-}
-.userinfo .divider {
-    background: #e45022;
-}
 .userinfo > li > a {
     color: #fff;
 }
@@ -85,6 +76,10 @@ body, html {
     margin:0 5px;
     color:#666;
     font-weight:400;
+    border:1px solid #666;
+    padding:5px;
+    border-radius:4px;
+    cursor:pointer;
 }
 
 input[type="radio"] {
@@ -110,16 +105,14 @@ input[type="radio"] {
     font-family:FontAwesome;
 }
 .url-type-text:checked + .youtube {
-    color:#cc181e;
+    background:#cc181e;
+    color:#fff;
+    border-color:#cc181e;
 }
 .url-type-text:checked + .spotify {
-    color:#2ebd59;
-}
-.url-type-text:checked + .vimeo {
-    color:#A6E2F9;
-}
-.url-type-text:checked + .soundcloud {
-    color:#f50;
+    background:#2ebd59;
+    color:#fff;
+    border-color:#2ebd59;
 }
 @media screen and (max-width:955px) {
     .logo {
@@ -192,4 +185,60 @@ input[type="radio"] {
     height: 50px;
     text-align: center;
     vertical-align: bottom
+}
+.role {
+    font-size:15px;
+}
+.chats {
+    height:300px;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+.user-activities {
+    height:300px;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+p {
+    margin:0 0 1px;
+}
+.chatbody {
+    max-width:748px;
+}
+.Gebruiker, .Administrator, .Mod, .Tester {
+    font-weight:700;
+}
+
+.Administrator {
+    color: #bd0000;
+}
+.Tester {
+    color:#79d242;
+}
+.Banned {
+    text-decoration:line-through;
+}
+.emojione {
+    height:16px;
+}
+.error-message {
+    color:#bd0000;
+    font-weight:700;
+}
+.message {
+    word-break: keep-all;
+}
+.avatar-image {
+    border:1px solid #fff;
+    box-shadow:0px 1px 2px rgba(0,0,0,0.5);
+}
+.user-info {
+    padding:5px;
+}
+.chatbox {
+    margin:10px;
+}
+.Moderator {
+    color: #1e6ebd;
+    font-weight: 700;
 }
