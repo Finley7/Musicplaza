@@ -165,18 +165,62 @@ class UsersController extends AppController
      */
     public function view($username = null)
     {
-        $profile = $this->Users->findByUsername($username)->contain(['PrimaryRole'])->first();
+        $profile = $this->Users->findByUsername($username)->contain([
+            'PrimaryRole',
+            'Timeline' => [
+                'Users' => ['PrimaryRole'],
+                'Wows'
+            ],
+            'TimelineWows',
+            'Threads',
+            'Comments'
+        ])->first();
+        $this->loadModel('Friends');
+
+        $friendFinder = $this->Friends->find('friends', [
+            'user_id' => $this->Auth->user('id')
+        ])->contain(
+            [
+                'FriendOne' => [
+                    'Timeline' => [
+                        'Wows',
+                        'Users' => [
+                            'PrimaryRole'
+                        ]
+                    ]
+                ],
+                'FriendTwo' => [
+                    'Timeline' => [
+                        'Wows',
+                        'Users' => [
+                            'PrimaryRole'
+                        ]
+                    ]
+                ]
+            ]
+        )->where([
+            'status' => 'accepted'
+        ]);
+
+        $foreign_ids = [];
+
+        foreach($friendFinder->all() as $friend) {
+            if($friend->user_one == $this->Auth->user('id')) {
+                $foreign_ids[] = $friend->user_two;
+            }
+            else
+            {
+                $foreign_ids[] = $friend->user_one;
+            }
+        }
 
         if(is_null($profile))
         {
             throw new NotFoundException("Gebruiker niet gevonden");
         }
 
-        $threads = $this->Threads->findByAuthorId($profile->id);
-        $comments = $this->Comments->findByAuthorId($profile->id);
-
         $this->set('page_parent', 'community');
-        $this->set(compact('profile', 'threads', 'comments'));
+        $this->set(compact('profile', 'foreign_ids'));
         $this->set('title', __('Gebruiker {0}', $profile->username));
     }
     /**

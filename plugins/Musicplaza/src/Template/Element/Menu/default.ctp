@@ -7,7 +7,7 @@
             <div class="col-md-4 col-md-offset-6 panels">
                 <div class="panel panel-header">
                     <div class="panel-body">
-                        Welkom op Empire! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam assumenda commodi culpa dolor dolorum ea, est fugit maxime, nihil odit possimus, quam quas sequi tempora tempore veniam vero! Quibusdam, reiciendis.
+                        Welkom op VinylVinder hoofd! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam assumenda commodi culpa dolor dolorum ea, est fugit maxime, nihil odit possimus, quam quas sequi tempora tempore veniam vero! Quibusdam, reiciendis.
                     </div>
                 </div>
             </div>

@@ -64,8 +64,17 @@ class UsersTable extends Table
                 ]
             ]
         );
+        $this->hasMany('TimelineWows', [
+            'foreignKey' => 'user_id'
+        ]);
         $this->hasMany('Notifications', [
             'foreignKey' => 'user_id'
+        ]);
+        $this->hasMany('Threads', [
+            'foreignKey' => 'author_id'
+        ]);
+        $this->hasMany('Comments', [
+            'foreignKey' => 'author_id'
         ]);
     }
 

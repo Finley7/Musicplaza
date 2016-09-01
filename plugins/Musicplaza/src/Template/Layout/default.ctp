@@ -13,11 +13,16 @@
     <meta name="author" content="Finley Siebert">
     <meta name="theme-color" content="#ff5a26">
 
-    <?= $this->Html->css('bootstrap.min.css') ?>
-    <link rel="stylesheet" href="https://bootswatch.com/yeti/bootstrap.min.css">
-    <?= $this->Html->css('font-awesome.min.css') ?>
-    <?= $this->Html->css('amaran.min.css'); ?>
-    <?= $this->Html->css('animate.min.css'); ?>
+    <?=
+    $this->Html->css(
+        [
+            'yeti.css',
+            'font-awesome.min.css',
+            'amaran.min.css',
+            'animate.min.css'
+        ]
+    );
+    ?>
 
     <?= $this->Html->css('base.css') ?>
 
